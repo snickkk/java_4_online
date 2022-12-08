@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo 'run java'
+
 . ./remove-class.sh
 
 echo 'run level 1'
