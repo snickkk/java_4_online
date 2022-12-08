@@ -37,7 +37,7 @@ cd ../
 echo 'run med proj and create simple jar'
 cd ./med_proj
 javac -sourcepath ./src -d build/classes ./src/ua/com/alevel/BestUnit.java
-jar cvfm build/jar/hello.jar resources/MANIFEST.MF -C build/classes .
+jar cvfm build/jar/BestUnit.jar resources/MANIFEST.MF -C build/classes .
 java -jar build/jar/BestUnit.jar
 cd ../../
 

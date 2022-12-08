@@ -1,0 +1,2 @@
+Main-Class: ua.com.alevel.BestUnit
+Class-Path: commons-lang3-3.12.0-javadoc.jar
