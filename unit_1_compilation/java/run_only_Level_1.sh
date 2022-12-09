@@ -42,5 +42,3 @@ java -jar build/jar/BestUnit.jar
 cd ../../
 
 . ./remove-class.sh
-
-
