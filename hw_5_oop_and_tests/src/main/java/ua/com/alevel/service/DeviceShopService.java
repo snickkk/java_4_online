@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class DeviceShopService {
-    private DeviceShopDao deviceShopDao = new DeviceShopDao1();
+    private final DeviceShopDao deviceShopDao = new DeviceShopDao1();
 
 
     public void createShop(Shop shop) {

@@ -15,13 +15,6 @@ public class Shop  extends  BaseEntity{
         return shopIdList;
     }
 
-    public void setShopIdList(Set<String> shopIdList) {
-        this.shopIdList = shopIdList;
-    }
-
-    public String getShopName() {
-        return shopName;
-    }
 
     public void setShopName(String shopName) {
         this.shopName = shopName;
@@ -39,7 +32,6 @@ public class Shop  extends  BaseEntity{
     public String toString() {
         return "Shop{" +
                 ", id='" + getId() + '\'' +
-                "shopIdList=" + shopIdList +
                 ", shopName='" + shopName + '\'' +
                 ", country='" + city + '\'' +
                 '}';

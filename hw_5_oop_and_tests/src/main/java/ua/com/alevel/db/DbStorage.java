@@ -24,18 +24,16 @@ public class DbStorage {
     }
 
 
-    public String addShop(Shop shop) {
+    public void addShop(Shop shop) {
         String id = generateShopId();
         shop.setId(id);
         shops.add(shop);
-        return id;
     }
 
-    public String addDevice(Device device) {
+    public void addDevice(Device device) {
         String id = generateDeviceIdId();
         device.setId(id);
         devices.add(device);
-        return id;
     }
 
     public List<Shop> findAllShop() {

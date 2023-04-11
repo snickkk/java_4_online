@@ -11,9 +11,6 @@ public class Device  extends BaseEntity{
     private String city;
 
 
-    public String getModel() {
-        return model;
-    }
 
     public void setModel(String model) {
         this.model = model;
@@ -39,15 +36,11 @@ public class Device  extends BaseEntity{
         return deviceIdList;
     }
 
-    public void setDeviceIdList(Set<String> deviceIdList) {
-        this.deviceIdList = deviceIdList;
-    }
 
     @Override
     public String toString() {
         return "Device{" +
                 ", id='" + getId() + '\'' +
-                "deviceIdList=" + deviceIdList +
                 ", model='" + model + '\'' +
                 ", price='" + price + '\'' +
                 ", city='" + city + '\'' +

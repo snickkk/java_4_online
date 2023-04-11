@@ -43,39 +43,17 @@ public class DeviceShopController {
 
     private void crud(BufferedReader reader, String select) throws IOException {
         switch (select) {
-            case "1":
-                createDevice(reader);
-                break;
-            case "2":
-                createShop(reader);
-                break;
-            case "3":
-                findDevice(reader);
-                break;
-            case "4":
-                findShop(reader);
-                break;
-            case "5":
-                updateDevice(reader);
-                break;
-            case "6":
-                updateShop(reader);
-                break;
-            case "7":
-                deleteDevice(reader);
-                break;
-            case "8":
-                deleteShop(reader);
-                break;
-            case "9":
-                findAllDevice();
-                break;
-            case "10":
-                findAllShop();
-                break;
-            case "11":
-                exit();
-                break;
+            case "1" -> createDevice(reader);
+            case "2" -> createShop(reader);
+            case "3" -> findDevice(reader);
+            case "4" -> findShop(reader);
+            case "5" -> updateDevice(reader);
+            case "6" -> updateShop(reader);
+            case "7" -> deleteDevice(reader);
+            case "8" -> deleteShop(reader);
+            case "9" -> findAllDevice();
+            case "10" -> findAllShop();
+            case "11" -> exit();
         }
         menu();
     }
@@ -112,7 +90,7 @@ public class DeviceShopController {
         System.out.println("Please enter device Id");
         String deviceId = reader.readLine();
         Optional<Device> device = deviceShopService.getDevice(deviceId);
-        if (device == null) {
+        if (device.isEmpty()) {
             System.out.println("Wrong ID");
         } else {
             System.out.println(device);
@@ -125,7 +103,7 @@ public class DeviceShopController {
         System.out.println("Please enter shop Id");
         String shopId = reader.readLine();
         Optional<Shop> shop = deviceShopService.getShop(shopId);
-        if (shop == null) {
+        if (shop.isEmpty()) {
             System.out.println("Wrong ID");
         } else {
             System.out.println(shop);
@@ -148,8 +126,8 @@ public class DeviceShopController {
             String price = reader.readLine();
             device.setPrice(price);
             System.out.println("Please enter devices country:");
-            String sity = reader.readLine();
-            device.setCity(sity);
+            String сity = reader.readLine();
+            device.setCity(сity);
             System.out.println("Thank you, the devices information is updated.");
         }
     }
